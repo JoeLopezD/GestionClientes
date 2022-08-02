@@ -31,22 +31,38 @@ class GestionClientesController extends BaseController
 
     public function create_post()
     {
-        $model = new NewsModel();
+        $model = new ClientesModel();
 
         $validationRules = [
-            'title' => 'required|min_length[3]|max_length[128]',
-            'text' => 'required',
+            'dni' => 'required',
+            'name' => 'required',
+            'surname' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'population' => 'required',
+            'location' => 'required',
+            'birth' => 'required',
+
         ];
 
         if ($this->validate($validationRules)) {
 
-            $title = $this->request->getPost('title');
-            $url = url_title($title);
-            $text = $this->request->getPost('text');
+            $dni = $this->request->getPost('dni');
+            $name = $this->request->getPost('name');
+            $surname = $this->request->getPost('surname');
+            $phone = $this->request->getPost('phone');
+            $email = $this->request->getPost('email');
+            $address = $this->request->getPost('address');
+            $population = $this->request->getPost('population');
+            $location = $this->request->getPost('location');
+            $birth = $this->request->getPost('birth');
 
-            $model->addNoticia($title, $url, $text);
 
-            echo view("pages/noticiesConfirm");
+
+            $model->addClient($dni, $name, $surname, $phone, $email, $address, $population, $location, $birth);
+
+            echo view("pages/userManagement/nouClientConfirm");
         } else {
             return redirect()->back()->withInput();
         }

@@ -14,7 +14,7 @@
                 <h5 class="text-center mb-4">Dades del nou client</h5>
                 <form class="form-card" action="/clients/create" method="POST">
 
-                    <div class="row justify-content-between text-left">
+                    <div class="row justify-content-center text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">DNI<span class="text-danger"> *</span></label> <input type="text" id="dni" name="dni" placeholder="DNI del client"> </div>
                      </div>
                     <div class="row justify-content-between text-left">
@@ -23,17 +23,20 @@
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Numero de telefon<span class="text-danger"> *</span></label> <input type="text" id="phone" name="phone" placeholder="Numero de telefon del client"></div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Correu electronic<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="Correu electronic del client"></div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Correu electronic<span class="text-danger"> *</span></label> <input type="mail" id="email" name="email" placeholder="Correu electronic del client"></div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Adreça<span class="text-danger"> *</span></label> <input type="text" id="address" name="address" placeholder="Adreça del client"> </div>
                     </div>
 
                     <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Població<span class="text-danger"> *</span></label> <input type="text" id="phone" name="phone" placeholder="Població del client. Per exemple: Lleida"></div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Localitat<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="Localitat del client. Per exemple: Alcarrás"></div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Població<span class="text-danger"> *</span></label> <input type="text" id="population" name="population" placeholder="Població del client. Per exemple: Lleida"></div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Localitat<span class="text-danger"> *</span></label> <input type="text" id="location" name="location" placeholder="Localitat del client. Per exemple: Alcarrás"></div>
                     </div>
 
+                    <div class="row justify-content-center text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Data de naixement<span class="text-danger"> *</span></label> <input type="text" id="birth" name="birth" placeholder="Data de naixement del client"> </div>
+                    </div>
 
                     </br>
                     <div class="row justify-content-center">

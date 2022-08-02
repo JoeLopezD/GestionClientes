@@ -14,7 +14,7 @@ class ClientesModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id','DNI','name','surname','phone','address','location','email','birth_date','created_at','delete_at','updated_at'];
+    protected $allowedFields    = ['id','DNI','name','surname','phone','address','population','location','email','birth_date','created_at','delete_at','updated_at'];
 
     // Dates
     protected $useTimestamps = false;
@@ -48,8 +48,15 @@ class ClientesModel extends Model
             return $this->findAll();
 
         }
-
-
         return $this->where('id',$slug)->first();
-}
+    }
+
+
+
+
+    public  function addClient($dni, $name, $surname, $phone, $email, $address, $population, $location, $birth){
+        $this->insert(["DNI"=>$dni,"name" => $name, "surname" => $surname, "phone" => $phone, "address" => $address, "location" => $location, "email" => $email, "phone" => $phone, "population" => $population]);
+
+        // 'DNI','name','surname','phone','address','location','email','birth_date'
+    }
 }

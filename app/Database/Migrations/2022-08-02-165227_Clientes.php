@@ -74,3 +74,4 @@ public function down()
         $this->forge->dropTable('clientes');
 }
 }
+
