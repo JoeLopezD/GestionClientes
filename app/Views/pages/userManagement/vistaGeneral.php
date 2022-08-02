@@ -69,22 +69,22 @@
 </br>
 
 
-    <?//php if (! empty($noticies) && is_array($noticies)): ?>
+    <?php if (! empty($clients) && is_array($clients)): ?>
         <div class="container">
         <div class="row">
 
-        <?//php foreach ($noticies as $news_item): ?>
+        <?php foreach ($clients as $clients_item): ?>
             
-            <!-- <div class="col col-sm-12 col-md-6 col-lg-6">
+            <div class="col col-sm-12 col-md-6 col-lg-6">
                 <div class="card" >
                     <div class="card-body">
-                        <h5 class="card-title"><?//= esc($news_item['title']) ?></h5>
-                        <p class="card-text"><?//= esc($news_item['text']) ?></p>
+                        <h5 class="card-title"><?= esc($clients_item['name']) ?> <?= esc($clients_item['surname']) ?></h5>
+                        <p class="card-text"><?= esc($clients_item['DNI']) ?></p>
 
-                        <?//php  if(session()->get('loggedIn')){?>
+                        <!-- <?//php  if(session()->get('loggedIn')){?> -->
                         <a href="/noticies/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-primary">Veure</a>
 
-                        <?//php if(session()->get('rol')>=5){?>
+                        <!-- <?//php if(session()->get('rol')>=5){?> -->
                         <a href="/noticies/update/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-warning">Update</a>
                         <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
                         <?//php } ?>
@@ -96,136 +96,22 @@
                     </div>
                 </div>
         </br>
-            </div> -->
-
-
-
-
-
-<!-- ------------PRUEBA------------- -->
-
-<div class="col col-sm-12 col-md-6 col-lg-6">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
-                        <p class="card-text">Texto</p>
-
-                        <a href="/noticies/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-primary">Veure</a>
-
-                        <a href="/noticies/update/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-warning">Update</a>
-                        <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
-
-
-                        <?php
-                        ?>
-                    </div>
-                </div>
-        </br>
             </div>
 
 
-
-
-            <div class="col col-sm-12 col-md-6 col-lg-6">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
-                        <p class="card-text">Texto</p>
-
-                        <a href="/noticies/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-primary">Veure</a>
-
-                        <a href="/noticies/update/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-warning">Update</a>
-                        <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
-
-
-                        <?php
-                        ?>
-                    </div>
-                </div>
-        </br>
-            </div>
-
-
-
-
-
-            <div class="col col-sm-12 col-md-6 col-lg-6">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
-                        <p class="card-text">Texto</p>
-
-                        <a href="/noticies/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-primary">Veure</a>
-
-                        <a href="/noticies/update/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-warning">Update</a>
-                        <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
-
-
-                        <?php
-                        ?>
-                    </div>
-                </div>
-        </br>
-            </div>
-
-
-
-
-            <div class="col col-sm-12 col-md-6 col-lg-6">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
-                        <p class="card-text">Texto</p>
-
-                        <a href="/noticies/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-primary">Veure</a>
-
-                        <a href="/noticies/update/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-warning">Update</a>
-                        <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
-
-
-                        <?php
-                        ?>
-                    </div>
-                </div>
-        </br>
-            </div>
-
-                            
-
-    <!----------------- FIN PRUEBA ------------------ -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </br>
 
-        <?//php endforeach; ?>
+        <?php endforeach; ?>
         </div>
 
         </div>
 
-    <?//php else: ?>
+    <?php else: ?>
 
-        <!-- <h3>No se han trobat clients.</h3>
-        <p>No ha estat posible trobar clients ja registrats.</p> -->
+        <h3>No se han trobat clients.</h3>
+        <p>No ha estat posible trobar clients ja registrats.</p>
 
-    <?//php endif; ?>
+    <?php endif; ?>
 
 
     <div class="d-flex justify-content-center">

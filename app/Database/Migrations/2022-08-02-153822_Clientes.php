@@ -30,8 +30,8 @@ class Clientes extends Migration
                         'auto_increment' => false,
                 ],
                 'phone'          => [
-                        'type'           => 'INT',
-                        'constraint'     => 10,
+                        'type'           => 'VARCHAR',
+                        'constraint'     => '20',
                         'auto_increment' => false,
                 ],
                 'address'          => [
@@ -43,6 +43,11 @@ class Clientes extends Migration
                         'type'           => 'VARCHAR',
                         'constraint'     => '50',
                         'auto_increment' => false,
+                ],
+                'population'          => [
+                    'type'           => 'VARCHAR',
+                    'constraint'     => '50',
+                    'auto_increment' => false,
                 ],
                 'email'          => [
                         'type'           => 'VARCHAR',

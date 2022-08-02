@@ -28,10 +28,10 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="<?= base_url('/noticies')?>">Noticies</a>
+            <a class="nav-link" aria-current="page" href="<?= base_url('/')?>">Fitxes de clients</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/noticies/create')?>">Crear</a>
+            <a class="nav-link" href="<?= base_url('/clients/create')?>">Nou Client</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" href="<?= base_url('/contacte')?>">Contacte</a>

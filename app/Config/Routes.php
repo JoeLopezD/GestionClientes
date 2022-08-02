@@ -38,6 +38,11 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'GestionClientesController::index');
 $routes->get('/clientes', 'GestionClientesController::index');
 
+
+$routes->get('/clients/create', 'GestionClientesController::create');
+$routes->post('/clients/create', 'GestionClientesController::create_post');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
