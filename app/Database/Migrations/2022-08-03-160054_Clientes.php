@@ -55,8 +55,7 @@ class Clientes extends Migration
                         'auto_increment' => false,
                 ],
                 'birth_date'          => [
-                        'type'           => 'VARCHAR',
-                        'constraint'     => '10',
+                        'type'           => 'DATE',
                         'auto_increment' => false,
                 ],
                 'created_at datetime default current_timestamp',

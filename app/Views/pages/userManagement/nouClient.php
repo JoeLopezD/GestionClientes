@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="row justify-content-center text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Data de naixement<span class="text-danger"> *</span></label> <input type="date" id="birth" name="birth" value="2000-01-01"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Data de naixement<span class="text-danger"> *</span></label> <input type="date" data-date-format="DD MMMM YYYY" id="birth" name="birth" value="2000-01-01"> </div>
                         </div>
 
                         </br>
