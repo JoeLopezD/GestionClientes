@@ -42,6 +42,9 @@ $routes->get('/clientes', 'GestionClientesController::index');
 $routes->get('/clients/create', 'GestionClientesController::create');
 $routes->post('/clients/create', 'GestionClientesController::create_post');
 
+$routes->get('/clientsDetall/(:segment)', 'GestionClientesController::view/$1');
+$routes->get('/clients/update/(:segment)', 'GestionClientesController::update/$1');
+
 
 /*
  * --------------------------------------------------------------------

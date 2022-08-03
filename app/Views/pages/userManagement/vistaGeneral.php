@@ -79,13 +79,13 @@
                 <div class="card" >
                     <div class="card-body">
                         <h5 class="card-title"><?= esc($clients_item['name']) ?> <?= esc($clients_item['surname']) ?></h5>
-                        <p class="card-text"><?= esc($clients_item['DNI']) ?></p>
+                        <p class="card-text">DNI: <?= esc($clients_item['DNI']) ?></p>
 
                         <!-- <?//php  if(session()->get('loggedIn')){?> -->
-                        <a href="/noticies/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-primary">Veure</a>
+                        <a href="/clientsDetall/<?= esc($clients_item['DNI']) ?>" class="btn btn-primary">Veure</a>
 
                         <!-- <?//php if(session()->get('rol')>=5){?> -->
-                        <a href="/noticies/update/<?//= esc($news_item['url'], 'url') ?>" class="btn btn-warning">Update</a>
+                        <a href="/clients/update/<?= esc($clients_item['DNI']) ?>" class="btn btn-warning">Update</a>
                         <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
                         <?//php } ?>
                         <?//php } ?>

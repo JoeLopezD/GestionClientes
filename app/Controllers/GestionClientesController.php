@@ -67,4 +67,45 @@ class GestionClientesController extends BaseController
             return redirect()->back()->withInput();
         }
     }
+
+
+
+
+
+
+    public function view($dni = null)
+    {
+        $model = new ClientesModel();
+
+        $data['clients'] = $model->getClients($dni);
+
+        if (empty($data['clients'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('No se ha encontrado el cliente con DNI: ' . $dni);
+        }
+
+        //$data['title'] = $data['noticies']['title'];
+
+        echo view("pages/userManagement/detailClient", $data);
+
+    }
+
+
+
+
+    public function update($dni = null)
+    {
+        $model = new ClientesModel();
+
+        $data['clients'] = $model->getClients($dni);
+
+        if (empty($data['clients'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('No se ha encontrado el cliente con DNI: ' . $dni);
+        }
+
+        //$data['title'] = $data['noticies']['title'];
+
+        //$this->request->getMethod()=='post'
+        echo view("pages/userManagement/updateClient", $data);
+    }
+
 }

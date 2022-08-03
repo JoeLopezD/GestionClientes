@@ -43,12 +43,12 @@ class ClientesModel extends Model
 
 
 
-    public function getClients ($slug=false) {
-        if ($slug===false) {
+    public function getClients ($dni=false) {
+        if ($dni===false) {
             return $this->findAll();
 
         }
-        return $this->where('id',$slug)->first();
+        return $this->where('dni',$dni)->first();
     }
 
 
