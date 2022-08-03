@@ -102,10 +102,55 @@ class GestionClientesController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('No se ha encontrado el cliente con DNI: ' . $dni);
         }
 
-        //$data['title'] = $data['noticies']['title'];
+        $session = \Config\Services::session();
+        $idClient=$data['clients']['id'];
+        // dd($idClient);
+        $_SESSION['item'] = $idClient;
+        $session->markAsFlashdata($idClient);
 
-        //$this->request->getMethod()=='post'
         echo view("pages/userManagement/updateClient", $data);
+    }
+
+    public function update_post()
+    {
+        $model = new ClientesModel();
+
+        $validationRules = [
+            'dni' => 'required',
+            'name' => 'required',
+            'surname' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'population' => 'required',
+            'location' => 'required',
+            'birth' => 'required',
+
+        ];
+
+        if ($this->validate($validationRules)) {
+
+            $session = \Config\Services::session();
+            $idClient=$session->get('item');
+
+            // dd($idClient);
+
+            $dni = $this->request->getPost('dni');
+            $name = $this->request->getPost('name');
+            $surname = $this->request->getPost('surname');
+            $phone = $this->request->getPost('phone');
+            $email = $this->request->getPost('email');
+            $address = $this->request->getPost('address');
+            $population = $this->request->getPost('population');
+            $location = $this->request->getPost('location');
+            $birth = $this->request->getPost('birth');
+
+            $model->updateClient($idClient, $dni, $name, $surname, $phone, $email, $address, $population, $location, $birth);
+
+            echo view("pages/userManagement/updateClientConfirm");
+        } else {
+            return redirect()->back()->withInput();
+        }
     }
 
 }

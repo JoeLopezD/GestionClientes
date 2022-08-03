@@ -56,7 +56,27 @@ class ClientesModel extends Model
 
     public  function addClient($dni, $name, $surname, $phone, $email, $address, $population, $location, $birth){
         $this->insert(["DNI"=>$dni,"name" => $name, "surname" => $surname, "phone" => $phone, "address" => $address, "location" => $location, "email" => $email, "phone" => $phone, "population" => $population, "birth_date" => $birth]);
-
-        // 'DNI','name','surname','phone','address','location','email','birth_date'
     }
+
+
+
+    public  function updateClient($idClient, $dni, $name, $surname, $phone, $email, $address, $population, $location, $birth){
+
+        $data = [
+            "DNI"=>$dni,
+            "name" => $name, 
+            "surname" => $surname,
+            "phone" => $phone,
+            "address" => $address,
+            "location" => $location,
+             "email" => $email, 
+             "phone" => $phone, 
+             "population" => $population, 
+             "birth_date" => $birth
+        ];
+
+        $this->update($idClient,$data);
+        }
+
+
 }
