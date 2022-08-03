@@ -153,4 +153,11 @@ class GestionClientesController extends BaseController
         }
     }
 
+
+    function deleteClient($dni){
+        $model = new ClientesModel();
+        $model->deleteClient($dni);
+        echo view("pages/userManagement/deleteConfirm");
+        }
+
 }

@@ -79,4 +79,7 @@ class ClientesModel extends Model
         }
 
 
+    public function deleteClient($dni){
+        $this->where('DNI', $dni)->delete();
+    }
 }

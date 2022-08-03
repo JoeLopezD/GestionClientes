@@ -80,13 +80,15 @@
                     <div class="card-body">
                         <h5 class="card-title"><?= esc($clients_item['name']) ?> <?= esc($clients_item['surname']) ?></h5>
                         <p class="card-text">DNI: <?= esc($clients_item['DNI']) ?></p>
+                        <p class="card-text">Localitat: <?= esc($clients_item['location']) ?></p>
+
 
                         <!-- <?//php  if(session()->get('loggedIn')){?> -->
                         <a href="/clientsDetall/<?= esc($clients_item['DNI']) ?>" class="btn btn-primary">Veure</a>
 
                         <!-- <?//php if(session()->get('rol')>=5){?> -->
                         <a href="/clients/update/<?= esc($clients_item['DNI']) ?>" class="btn btn-warning">Update</a>
-                        <a href="/noticies/delete/<?//= esc($news_item['id']) ?>" class="btn btn-danger">Delete</a>
+                        <a href="/clients/delete/<?= esc($clients_item['DNI']) ?>" onclick="return confirm('Estás segur de que vols esborrar aquesta fitxa de client?');" class="btn btn-danger">Delete</a>
                         <?//php } ?>
                         <?//php } ?>
 
