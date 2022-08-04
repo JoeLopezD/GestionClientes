@@ -36,14 +36,14 @@
 
 
 <div class="container">
-<!-- <div class="row">
+<div class="row">
 
 
-    <form method='get' action="<?//= base_url('/'); ?>" id="searchForm">
-        <input type='text' name='q' value='<?//php $search ?>' placeholder="Search here...">
+    <form method='get' action="<?= base_url('/'); ?>" id="searchForm">
+        <input type='text' name='q' value='<?php $search ?>' placeholder="Search here...">
         <input type='button' id='btnsearch' value='Cercar' onclick='document.getElementById("searchForm").submit();'>
     </form>
-   <div class="col">
+<!--    <div class="col">
 <a href="<//?=base_url('/')?>?order=id&tipusDeOrdre=ASC&q=<?//=$search?>&page=<?//=$activepage?>" class="btn btn-outline-primary">Ordenar per id asc</a>
 </div>
 <div class="col">

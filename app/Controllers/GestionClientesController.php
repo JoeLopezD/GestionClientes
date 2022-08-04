@@ -16,13 +16,23 @@ class GestionClientesController extends BaseController
         $data['clients'] = $model->getClients();
 
 
+        $searchData = $this->request->getGet();
 
+        $search = $searchData['q'] ?? '';
+
+
+        if ($search != '') {
+            $paginateData = $model->getByTitleOrText($search)->paginate(4);
+        }
+        else{
+            $paginateData=$model->paginate(4);
+        }
 
 
         $data = [
             // 'page_title' => 'CI4 Pager & search filter',
             // 'title' => 'Llistat paginat',
-            'clients' => $model->paginate(4),
+            'clients' => $paginateData,
             'pager' => $model->pager,
             // 'search' => $search,
             // 'activepage' => $activePage,

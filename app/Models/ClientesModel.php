@@ -82,4 +82,13 @@ class ClientesModel extends Model
     public function deleteClient($dni){
         $this->where('DNI', $dni)->delete();
     }
+
+
+
+
+
+    public function getByTitleOrText($search)
+{
+        return $this->select(['DNI', 'name', 'surname', 'location','population','phone','email'])->orLike('phone', $search, 'both', true)->orLike('email', $search, 'both', true)->orLike('population', $search, 'both', true)->orLike('location', $search, 'both', true)->orLike('surname', $search, 'both', true)->orLike('DNI', $search, 'both', true)->orLike('name', $search, 'both', true);
+}
 }
