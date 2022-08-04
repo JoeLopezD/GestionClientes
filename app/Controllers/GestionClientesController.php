@@ -16,6 +16,21 @@ class GestionClientesController extends BaseController
         $data['clients'] = $model->getClients();
 
 
+
+
+
+        $data = [
+            // 'page_title' => 'CI4 Pager & search filter',
+            // 'title' => 'Llistat paginat',
+            'clients' => $model->paginate(4),
+            'pager' => $model->pager,
+            // 'search' => $search,
+            // 'activepage' => $activePage,
+        ];
+
+
+
+
         echo view('pages/userManagement/vistaGeneral', $data);
     }
 

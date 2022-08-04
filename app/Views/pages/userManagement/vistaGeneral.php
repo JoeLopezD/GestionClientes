@@ -118,7 +118,7 @@
 
     <div class="d-flex justify-content-center">
 
-    <!-- <p><?//= $pager->links('default', 'daw_template'); ?></p> -->
+    <p><?= $pager->links('default', 'pagination_template'); ?></p>
 
     </div>
 <?= $this->endSection() ?>
