@@ -108,8 +108,6 @@ class GestionClientesController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('No se ha encontrado el cliente con DNI: ' . $dni);
         }
 
-        //$data['title'] = $data['noticies']['title'];
-
         echo view("pages/userManagement/detailClient", $data);
 
     }

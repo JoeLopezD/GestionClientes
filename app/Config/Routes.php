@@ -48,6 +48,9 @@ $routes->post('/clients/update', 'GestionClientesController::update_post');
 $routes->get('/clients/delete/(:segment)', 'GestionClientesController::deleteClient/$1');
 
 
+$routes->get('/productes/afegir/(:segment)', 'GestionProductosController::create/$1');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
