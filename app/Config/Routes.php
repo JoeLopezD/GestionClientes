@@ -50,6 +50,9 @@ $routes->get('/clients/delete/(:segment)', 'GestionClientesController::deleteCli
 
 $routes->get('/productes/afegir/(:segment)', 'GestionProductosController::create/$1');
 
+$routes->post('/nouproducte/(:segment)', 'GestionProductosController::addProducte/$1');
+
+
 
 /*
  * --------------------------------------------------------------------

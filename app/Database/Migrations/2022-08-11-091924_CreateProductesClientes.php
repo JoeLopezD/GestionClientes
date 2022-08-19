@@ -13,28 +13,22 @@ class CreateProductesClientes extends Migration
                         'type'           => 'INT',
                         'auto_increment' => true,
                 ],
-                'id_client'          => [
-                    'type'           => 'INT',
-                    'constraint'     => 255,
+                'dni_client'          => [
+                        'type'           => 'VARCHAR',
+                        'constraint'     => '20',
+                        'auto_increment' => false,
                 ],
-                'id_producte'          => [
-                    'type'           => 'INT',
-                    'constraint'     => 255,
+                'num_factura'          => [
+                        'type'           => 'VARCHAR',
+                        'constraint'     => '150',
                 ],
-                'created_at'      =>  [
-                          'type'         =>  'DATETIME',
-                           'null'         =>  true,
-                           'default'    =>  null,
-                ],
-                'updated_at'     =>  [
-                          'type'         =>  'DATETIME',
-                           'null'         =>  true,
-                           'default'    =>  null,
-                ]
+                'created_at datetime default current_timestamp',
+                'delete_at datetime default null',
+                'updated_at datetime default current_timestamp on update current_timestamp'
         ]);
         $this->forge->addPrimaryKey('id', true);
-        $this->forge->addForeignKey('id_client', 'clientes', 'id');
-        $this->forge->addForeignKey('id_producte', 'productes', 'id');
+        // $this->forge->addForeignKey('id_client', 'clientes', 'id');
+        // $this->forge->addForeignKey('id_producte', 'productes', 'id');
         $this->forge->createTable('ProductesClientes');
 
 

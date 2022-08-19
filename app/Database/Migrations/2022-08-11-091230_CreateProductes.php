@@ -45,16 +45,9 @@ class CreateProductes extends Migration
                         'type'           => 'VARCHAR',
                         'constraint'     => '150',
                 ],
-                'created_at'      =>  [
-                          'type'         =>  'DATETIME',
-                           'null'         =>  true,
-                           'default'    =>  null,
-                ],
-                'updated_at'     =>  [
-                          'type'         =>  'DATETIME',
-                           'null'         =>  true,
-                           'default'    =>  null,
-                ]
+                'created_at datetime default current_timestamp',
+                'delete_at datetime default null',
+                'updated_at datetime default current_timestamp on update current_timestamp'
         ]);
         $this->forge->addPrimaryKey('id', true);
         $this->forge->createTable('productes');

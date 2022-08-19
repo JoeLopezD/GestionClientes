@@ -17,6 +17,7 @@
     <p><b>Client registrat en la data de:</b> <?= esc($clients['created_at']) ?></p>
 
     
+    <p><a href="/productes/afegir/<?= esc($clients['DNI']) ?>" class="btn btn-primary">+</a></p>
 
 
 
@@ -49,10 +50,6 @@
         <?//php endforeach ?>
     </tbody>
 </table>
-
-
-
-<p><a href="/productes/afegir/<?= esc($clients['DNI']) ?>" class="btn btn-primary">+</a></p>
 
 
 <?= $this->endSection() ?>
