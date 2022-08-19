@@ -51,4 +51,9 @@ class AlvaranesModel extends Model
         return $this->where('num_factura',$alvara_num)->first();
     }
 
+
+    public function getAlvaranes_dni($dni){
+        return $this->where('dni_client',$dni)->findAll();
+    }
+
 }

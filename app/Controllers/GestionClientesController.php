@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ClientesModel;
+use App\Models\ProductesModel;
+use App\Models\AlvaranesModel;
 
 
 class GestionClientesController extends BaseController
@@ -102,12 +104,18 @@ class GestionClientesController extends BaseController
     {
         $model = new ClientesModel();
 
+        $modelAlvaranes = new AlvaranesModel();
+
+
+        $data['alvaranes']=$modelAlvaranes->getAlvaranes_dni($dni);
         $data['clients'] = $model->getClients($dni);
 
         if (empty($data['clients'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('No se ha encontrado el cliente con DNI: ' . $dni);
         }
 
+
+        // dd($data['alvaranes']);
         echo view("pages/userManagement/detailClient", $data);
 
     }
