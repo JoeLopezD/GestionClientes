@@ -69,6 +69,10 @@ class GestionProductosController extends BaseController
 
         echo view("pages/productManagement/producteAfegit", $data);
     }
+    else{
+        session()->setFlashdata('error', 'ERROR! Es necessari emplenar tots els camps!');
+        return redirect()->back()->withInput();
+    }
 }
 
 
@@ -117,6 +121,21 @@ class GestionProductosController extends BaseController
 
             echo view("pages/productManagement/producteAfegit", $data);
     }
+    else{
+        session()->setFlashdata('error', 'ERROR! Es necessari emplenar tots els camps!');
+        return redirect()->back()->withInput();
+    }
 
 }
+
+
+
+
+    public function view($alvara_num){
+        $model = new ProductesModel();
+
+        $productes=$model ->getProducts($alvara_num);
+
+        dd($productes);
+    }
 }

@@ -91,6 +91,7 @@ class GestionClientesController extends BaseController
 
             echo view("pages/userManagement/nouClientConfirm");
         } else {
+            session()->setFlashdata('error', 'ERROR! Es necessari emplenar tots els camps');
             return redirect()->back()->withInput();
         }
     }
@@ -187,6 +188,10 @@ class GestionClientesController extends BaseController
 
     function deleteClient($dni){
         $model = new ClientesModel();
+        $productModel=new ProductesModel();
+        $alvaraModel= new AlvaranesModel();
+
+
         $model->deleteClient($dni);
         echo view("pages/userManagement/deleteConfirm");
         }

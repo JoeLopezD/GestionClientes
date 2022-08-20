@@ -56,6 +56,7 @@ $routes->get('/productes/update/(:segment)/(:segment)', 'GestionProductosControl
 
 $routes->post('/updateProducte/(:segment)', 'GestionProductosController::updateProducte/$1');
 
+$routes->get('/productes/veure/(:segment)', 'GestionProductosController::view/$1');
 
 /*
  * --------------------------------------------------------------------

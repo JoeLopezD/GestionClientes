@@ -2,11 +2,10 @@
 
 <?= $this->section('contingut') ?>
 
-<?= session()->getFlashdata('error'); ?>
-<?= service('validation')->listErrors(); ?>
-
     <?= csrf_field(); ?>
-
+    <div style="color:red">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
     <!-- <div class="container-fluid px-1 py-3 mx-auto"> -->
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-12 text-center">

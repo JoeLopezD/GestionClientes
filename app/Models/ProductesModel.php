@@ -45,4 +45,9 @@ class ProductesModel extends Model
     public  function addProduct($alvara_num, $product, $ref_code, $desc, $price, $doc_name, $seguro, $num_factura){
         $this->insert(['product_name'=>$product,'ref_code'=>$ref_code,'details'=>$desc,'price'=>$price,'doc_name'=>$doc_name,'seguro'=>$seguro,'num_factura'=>$num_factura,'num_alvara'=>$alvara_num]);
     }
+
+
+    public function getProducts($alvara_num){
+        return $this->where('num_alvara',$alvara_num)->findAll();
+    }
 }

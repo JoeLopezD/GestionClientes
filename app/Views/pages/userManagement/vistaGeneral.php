@@ -84,11 +84,11 @@
 
 
                         <!-- <?//php  if(session()->get('loggedIn')){?> -->
-                        <a href="/clientsDetall/<?= esc($clients_item['DNI']) ?>" class="btn btn-primary">Veure</a>
+                        <a href="/clientsDetall/<?= esc($clients_item['DNI']) ?>" class="btn btn-primary bi bi-eye-fill">Veure</a>
 
                         <!-- <?//php if(session()->get('rol')>=5){?> -->
-                        <a href="/clients/update/<?= esc($clients_item['DNI']) ?>" class="btn btn-warning">Update</a>
-                        <a href="/clients/delete/<?= esc($clients_item['DNI']) ?>" onclick="return confirm('Estás segur de que vols esborrar aquesta fitxa de client?');" class="btn btn-danger">Delete</a>
+                        <a href="/clients/update/<?= esc($clients_item['DNI']) ?>" class="btn btn-warning bi bi-pen">Actualitzar</a>
+                        <a href="/clients/delete/<?= esc($clients_item['DNI']) ?>" onclick="return confirm('Estás segur de que vols esborrar aquesta fitxa de client?');" class="btn btn-danger bi bi-trash-fill">Borrar</a>
                         <?//php } ?>
                         <?//php } ?>
 
