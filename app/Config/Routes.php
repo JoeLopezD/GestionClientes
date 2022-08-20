@@ -52,6 +52,9 @@ $routes->get('/productes/afegir/(:segment)', 'GestionProductosController::create
 
 $routes->post('/nouproducte/(:segment)', 'GestionProductosController::addProducte/$1');
 
+$routes->get('/productes/update/(:segment)/(:segment)', 'GestionProductosController::add/$1/$2');
+
+$routes->post('/updateProducte/(:segment)', 'GestionProductosController::updateProducte/$1');
 
 
 /*

@@ -53,7 +53,7 @@ class AlvaranesModel extends Model
 
 
     public function getAlvaranes_dni($dni){
-        return $this->where('dni_client',$dni)->findAll();
+        return $this->where('dni_client',$dni)->orderBy('created_at','DESC')->findAll();
     }
 
 }

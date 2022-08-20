@@ -5,7 +5,7 @@
 <p>Producte afegit Correctament!</p>
 
 
-<p><a href="/clientsDetall/<?= esc($DNI) ?>">Tornar a la pagina principal</a></p>
+<p><a href="/clientsDetall/<?= esc($DNI) ?>">Tornar a la fitxa de client</a></p>
 
 
 <?= $this->endSection() ?>

@@ -25,7 +25,7 @@
     <thead>
         <tr>
             <th scope="col"><h4>Num. Alvará</h4></th>
-            <th scope="col"><h4>Data de compra</h4></th>
+            <th scope="col"><h4>Data d'última modificació</h4></th>
             <th scope="col"><h4>Funcions</h4></th>
         </tr>
     </thead>
@@ -36,11 +36,11 @@
                     <p><?= esc($alvaranes_item['num_factura']) ?></p>
                 </td>
                 <td>
-                    <?= esc($alvaranes_item['created_at']) ?>
+                    <?= esc($alvaranes_item['updated_at']) ?>
                 </td>
                 <td>
-                <a href="/gestionUsuarios/delete/<?//= esc($users_item['id']) ?>" class="btn btn-danger">Delete</a>
-                <!-- <a href="/gestionUsuarios/update/<?//= esc($users_item['id']) ?>" class="btn btn-primary">Update</a> -->
+                <!-- <a href="/gestionUsuarios/delete/<?//= esc($users_item['id']) ?>" class="btn btn-danger">Delete</a> -->
+                <a href="/productes/update/<?= esc($clients['DNI']) ?>/<?= esc($alvaranes_item['num_factura']) ?>" class="btn btn-primary">Afegir</a>
                 </td>
                 </tr>
         <?php endforeach ?>
