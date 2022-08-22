@@ -193,6 +193,14 @@ class GestionClientesController extends BaseController
 
 
         $model->deleteClient($dni);
+        $alvaranes=$alvaraModel->getAlvaranes_dni($dni);
+        // dd($alvaranes);
+
+        foreach($alvaranes as $alvaran){
+            $alvaran_code=$alvaran['num_factura'];
+            $productModel->deleteProductes($alvaran_code);
+        }
+        $alvaraModel->deleteAlvaranes($dni);
         echo view("pages/userManagement/deleteConfirm");
         }
 

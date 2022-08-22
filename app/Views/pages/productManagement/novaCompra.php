@@ -7,6 +7,7 @@
     <?= csrf_field(); ?>
 
 
+    <p><a href="/clientsDetall/<?=esc($DNI) ?>" class="btn btn-primary bi bi-arrow-90deg-left"> Retrocedir</a></p>
 
 
     <div style="color:red">

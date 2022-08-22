@@ -56,4 +56,8 @@ class AlvaranesModel extends Model
         return $this->where('dni_client',$dni)->orderBy('created_at','DESC')->findAll();
     }
 
+    public function deleteAlvaranes($dni){
+        $this->where('dni_client', $dni)->delete();
+    }
+
 }

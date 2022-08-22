@@ -41,7 +41,7 @@
                 <td>
                 <!-- <a href="/gestionUsuarios/delete/<?//= esc($users_item['id']) ?>" class="btn btn-danger">Delete</a> -->
                 <a href="/productes/update/<?= esc($clients['DNI']) ?>/<?= esc($alvaranes_item['num_factura']) ?>" class="btn btn-primary bi bi-pen">Afegir</a>
-                <a href="/productes/veure/<?= esc($alvaranes_item['num_factura']) ?>" class="btn btn-primary bi bi-eye-fill">Veure</a>
+                <a href="/productes/veure/<?= esc($clients['DNI']) ?>/<?= esc($alvaranes_item['num_factura']) ?>" class="btn btn-primary bi bi-eye-fill">Veure</a>
 
                 </td>
                 </tr>

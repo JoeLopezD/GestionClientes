@@ -16,6 +16,7 @@ class GestionProductosController extends BaseController
         
         $dni_client=$data['clients']['DNI'];
 
+        $data['DNI']=$dni_client;
 
         echo view("pages/productManagement/novaCompra", $data);
     }
@@ -131,11 +132,25 @@ class GestionProductosController extends BaseController
 
 
 
-    public function view($alvara_num){
+    public function view($dni, $alvara_num){
         $model = new ProductesModel();
 
         $productes=$model ->getProducts($alvara_num);
 
-        dd($productes);
+        // dd($productes);
+
+        $data['productes']=$productes;
+
+        $data['Alvara']=$alvara_num;
+        $total=0;
+        foreach($productes as $product){
+            $total=$product['price']+$total;
+        }
+        // dd($total);
+        $data['total']=$total;
+        $data['DNI']=$dni;
+
+        echo view("pages/productManagement/alvaraDetails", $data);
+
     }
 }

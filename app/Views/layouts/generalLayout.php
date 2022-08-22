@@ -34,19 +34,6 @@
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/clients/create')?>">Nou Client</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="<?= base_url('/contacte')?>">Contacte</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="<?= base_url('/registrar')?>">Register</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="<?= base_url('/login')?>">Log in</a>
-          </li>
-          
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="<?= base_url('/gestionUsuarios')?>">CRUD</a>
-          </li>
         </ul>
       </div>
     </div>

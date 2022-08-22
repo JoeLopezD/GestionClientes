@@ -50,4 +50,8 @@ class ProductesModel extends Model
     public function getProducts($alvara_num){
         return $this->where('num_alvara',$alvara_num)->findAll();
     }
+
+    public function deleteProductes($alvaran_code){
+        $this->where('num_alvara', $alvaran_code)->delete();
+    }
 }
